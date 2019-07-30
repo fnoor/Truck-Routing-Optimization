@@ -1,0 +1,5 @@
+# Truck-Routing-Optimization
+Truck Routing Optimization
+There are 3 suppliers, 2 warehouses and 10 retailers. In order to simplify the problem of creating an optimal supply chain the problem was broken down into 4 parts. These 4 parts are ordered backwards from the retailer to the warehouse to the suppliers. For simplicity pallets are considered units throughout the model. For instance, the truck capacity is 40 pallets which means 40 units.
+
+A sweep algorithm is used to create an optimal truck routing system from warehouses to retailers. This algorithm creates an optimal base supply chain problem which focuses on optimizes the truck routing. The sweep algorithm considers milk runs instead of direct shipping. We were able to pair trucks to more than one retailer, reducing the number of trips taken, specifically reducing total distance traveled and number of trucks deployed from each warehouse. This in turn reduced transportation cost from the original model. The sweep algorithm could potentially be adjusted or perhaps the warehouses can negotiate for larger truck capacity in order to ship more units at once.
