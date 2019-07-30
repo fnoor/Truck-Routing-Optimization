@@ -1,0 +1,1085 @@
+!SESSION 2018-07-09 20:21:06.248 -----------------------------------------------
+eclipse.buildId=Build 0
+java.fullversion=8.0.5.0 - pwa6480sr5-20170905_01(SR5)
+JRE 1.8.0 IBM J9 2.9 Windows 8 amd64-64 Compressed References 20170901_363591 (JIT enabled, AOT enabled)
+J9VM - d56eb84
+JIT  - tr.open_20170901_140853_d56eb84
+OMR  - b033a01
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean
+
+!ENTRY org.eclipse.equinox.ds 4 0 2018-07-09 20:21:15.614
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.ds [4]
+  Unresolved requirement: Import-Package: org.eclipse.equinox.internal.util.event; version="1.0.0"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1562)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 2 2018-07-09 20:29:32.050
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench.swt".
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:62)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:390)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:143)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:76)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:107)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:70)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.clearContext(PartRenderingEngine.java:974)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:954)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$3(PartRenderingEngine.java:862)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$8.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:1937)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1560)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$15(WorkbenchWindow.java:1527)
+	at org.eclipse.ui.internal.WorkbenchWindow$10.run(WorkbenchWindow.java:1592)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1589)
+	at org.eclipse.ui.internal.Workbench$14.run(Workbench.java:1155)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1137)
+	at org.eclipse.ui.internal.Workbench.access$21(Workbench.java:1079)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1410)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1407)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1380)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1556)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$15(WorkbenchWindow.java:1527)
+	at org.eclipse.ui.internal.WorkbenchWindow$10.run(WorkbenchWindow.java:1592)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1589)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1603)
+	at org.eclipse.ui.internal.WorkbenchWindow$6.close(WorkbenchWindow.java:521)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer$11.shellClosed(WBWRenderer.java:563)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:98)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:308)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1696)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4612)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at ilog.odms.ide.rcp.IloApplication.start(IloApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:348)
+	at org.eclipse.swt.widgets.Shell.getSize(Shell.java:1092)
+	at org.eclipse.ui.internal.quickaccess.SearchField.storeDialog(SearchField.java:580)
+	at org.eclipse.ui.internal.quickaccess.SearchField.dispose(SearchField.java:557)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 88 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-07-09 20:29:32.113
+!MESSAGE Exception occurred while unrendering: org.eclipse.e4.ui.model.application.ui.basic.impl.TrimmedWindowImpl@809ed390 (elementId: IDEWindow, tags: [topLevel, shellMaximized], contributorURI: platform:/plugin/org.eclipse.ui.workbench) (widget: null, renderer: null, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (label: %trimmedwindow.label.eclipseSDK, iconURI: null, tooltip: null, context: null, variables: [], x: -52, y: 80, width: 1366, height: 788)
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:62)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.disposed(InjectorImpl.java:390)
+	at org.eclipse.e4.core.internal.di.Requestor.disposed(Requestor.java:143)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:76)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:107)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.handleInvalid(TrackableComputationExt.java:70)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.clearContext(PartRenderingEngine.java:974)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:954)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$3(PartRenderingEngine.java:862)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$8.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:1937)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1560)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$15(WorkbenchWindow.java:1527)
+	at org.eclipse.ui.internal.WorkbenchWindow$10.run(WorkbenchWindow.java:1592)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1589)
+	at org.eclipse.ui.internal.Workbench$14.run(Workbench.java:1155)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1137)
+	at org.eclipse.ui.internal.Workbench.access$21(Workbench.java:1079)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1410)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1407)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1380)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1556)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$15(WorkbenchWindow.java:1527)
+	at org.eclipse.ui.internal.WorkbenchWindow$10.run(WorkbenchWindow.java:1592)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1589)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1603)
+	at org.eclipse.ui.internal.WorkbenchWindow$6.close(WorkbenchWindow.java:521)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer$11.shellClosed(WBWRenderer.java:563)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:98)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:308)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1696)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4612)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4705)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at ilog.odms.ide.rcp.IloApplication.start(IloApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:476)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:348)
+	at org.eclipse.swt.widgets.Shell.getSize(Shell.java:1092)
+	at org.eclipse.ui.internal.quickaccess.SearchField.storeDialog(SearchField.java:580)
+	at org.eclipse.ui.internal.quickaccess.SearchField.dispose(SearchField.java:557)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	... 88 more
+
+!ENTRY ilog.odms.ide.opllang 1 0 2018-07-09 20:29:32.630
+!MESSAGE concert_wrap.IloEndMT
+!SESSION 2018-07-09 20:30:20.498 -----------------------------------------------
+eclipse.buildId=Build 0
+java.fullversion=8.0.5.0 - pwa6480sr5-20170905_01(SR5)
+JRE 1.8.0 IBM J9 2.9 Windows 8 amd64-64 Compressed References 20170901_363591 (JIT enabled, AOT enabled)
+J9VM - d56eb84
+JIT  - tr.open_20170901_140853_d56eb84
+OMR  - b033a01
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-09 21:22:10.124
+!MESSAGE ODM Bundle is OFF
+
+!ENTRY org.eclipse.jface 4 0 2018-07-09 21:44:48.465
+!MESSAGE The command ("ilog.odms.ide.ui.references") is undefined
+!STACK 0
+java.lang.Exception
+	at org.eclipse.jface.action.ExternalActionManager$CommandCallback.isActive(ExternalActionManager.java:381)
+	at org.eclipse.jface.action.ActionContributionItem.isCommandActive(ActionContributionItem.java:656)
+	at org.eclipse.jface.action.ActionContributionItem.isVisible(ActionContributionItem.java:712)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.reconcileManagerToModel(MenuManagerRenderer.java:1017)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:420)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:393)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:352)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:492)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:487)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:519)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4963)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4639)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3755)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at ilog.odms.ide.rcp.IloApplication.start(IloApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2018-07-09 23:57:43.324
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.util.ConcurrentModificationException)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at ilog.odms.ide.rcp.IloApplication.start(IloApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: java.util.ConcurrentModificationException
+	at java.util.ArrayList$SubList$1.checkForComodification(ArrayList.java:1216)
+	at java.util.ArrayList$SubList$1.next(ArrayList.java:1117)
+	at org.eclipse.jface.text.AbstractDocument.getPositions(AbstractDocument.java:1753)
+	at org.eclipse.jface.text.source.AnnotationModel.getRegionAnnotationIterator(AnnotationModel.java:738)
+	at org.eclipse.jface.text.source.AnnotationModel.getAnnotationIterator(AnnotationModel.java:700)
+	at org.eclipse.jface.text.source.AnnotationModel.getAnnotationIterator(AnnotationModel.java:711)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doPaint1(AnnotationRulerColumn.java:727)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doubleBufferPaint(AnnotationRulerColumn.java:541)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.redraw(AnnotationRulerColumn.java:824)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn$6.run(AnnotationRulerColumn.java:807)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 23 more
+
+!ENTRY org.eclipse.ui 4 0 2018-07-10 00:10:47.309
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at ilog.odms.ide.ui.editors.model.IloHyperLinkDetectorAST.detectHyperlinks(IloHyperLinkDetectorAST.java:69)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:289)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:261)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:469)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:212)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at ilog.odms.ide.rcp.IloApplication.start(IloApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2018-07-10 00:10:47.325
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at ilog.odms.ide.ui.editors.model.IloHyperLinkDetectorAST.detectHyperlinks(IloHyperLinkDetectorAST.java:69)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:289)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:261)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:469)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:212)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at ilog.odms.ide.rcp.IloApplication.start(IloApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2018-07-10 00:10:47.332
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at ilog.odms.ide.ui.editors.model.IloHyperLinkDetectorAST.detectHyperlinks(IloHyperLinkDetectorAST.java:69)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:289)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:261)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:469)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:212)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at ilog.odms.ide.rcp.IloApplication.start(IloApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2018-07-10 00:10:47.332
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at ilog.odms.ide.ui.editors.model.IloHyperLinkDetectorAST.detectHyperlinks(IloHyperLinkDetectorAST.java:69)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:289)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:261)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:469)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:212)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at ilog.odms.ide.rcp.IloApplication.start(IloApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2018-07-10 03:12:00.855
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.util.ConcurrentModificationException)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at ilog.odms.ide.rcp.IloApplication.start(IloApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:90)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:55)
+	at java.lang.reflect.Method.invoke(Method.java:508)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: java.util.ConcurrentModificationException
+	at java.util.ArrayList$SubList.checkForComodification(ArrayList.java:1242)
+	at java.util.ArrayList$SubList.listIterator(ArrayList.java:1102)
+	at java.util.AbstractList.listIterator(AbstractList.java:310)
+	at java.util.ArrayList$SubList.iterator(ArrayList.java:1098)
+	at org.eclipse.jface.text.AbstractDocument.getPositions(AbstractDocument.java:1752)
+	at org.eclipse.jface.text.source.AnnotationModel.getRegionAnnotationIterator(AnnotationModel.java:738)
+	at org.eclipse.jface.text.source.AnnotationModel.getAnnotationIterator(AnnotationModel.java:700)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doPaint1(AnnotationRulerColumn.java:727)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doubleBufferPaint(AnnotationRulerColumn.java:541)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.redraw(AnnotationRulerColumn.java:824)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn$6.run(AnnotationRulerColumn.java:807)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 23 more
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:49:50.281
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:50:16.486
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:50:19.497
+!MESSAGE Timeout
+!STACK 0
+java.lang.Exception: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:262)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-10 15:50:19.497
+!MESSAGE Error handling script request #1120
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+!STACK 0
+ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingException: Error handling script request #1120
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingRequest.handleResult(IloAbstractRunController.java:207)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:276)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:50:26.976
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:50:37.882
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:50:49.516
+!MESSAGE Timeout
+!STACK 0
+java.lang.Exception: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:262)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-10 15:50:49.522
+!MESSAGE Error handling script request #1121
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+!STACK 0
+ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingException: Error handling script request #1121
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingRequest.handleResult(IloAbstractRunController.java:207)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:276)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:50:51.460
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:51:19.542
+!MESSAGE Timeout
+!STACK 0
+java.lang.Exception: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:262)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-10 15:51:19.557
+!MESSAGE Error handling script request #1122
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+!STACK 0
+ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingException: Error handling script request #1122
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingRequest.handleResult(IloAbstractRunController.java:207)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:276)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:51:25.494
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:51:49.569
+!MESSAGE Timeout
+!STACK 0
+java.lang.Exception: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:262)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-10 15:51:49.585
+!MESSAGE Error handling script request #1123
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+!STACK 0
+ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingException: Error handling script request #1123
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingRequest.handleResult(IloAbstractRunController.java:207)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:276)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:52:07.703
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:52:19.607
+!MESSAGE Timeout
+!STACK 0
+java.lang.Exception: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:262)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-10 15:52:19.623
+!MESSAGE Error handling script request #1124
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+!STACK 0
+ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingException: Error handling script request #1124
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingRequest.handleResult(IloAbstractRunController.java:207)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:276)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:52:49.632
+!MESSAGE Timeout
+!STACK 0
+java.lang.Exception: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:262)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-10 15:52:49.632
+!MESSAGE Error handling script request #1125
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+!STACK 0
+ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingException: Error handling script request #1125
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingRequest.handleResult(IloAbstractRunController.java:207)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:276)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:53:19.719
+!MESSAGE Timeout
+!STACK 0
+java.lang.Exception: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:262)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-10 15:53:19.719
+!MESSAGE Error handling script request #1126
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+!STACK 0
+ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingException: Error handling script request #1126
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingRequest.handleResult(IloAbstractRunController.java:207)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:276)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:54:18.511
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:54:26.793
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:54:30.437
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:54:41.456
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:415)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:202)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:414)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.syncRequestScript(IloAbstractRunController.java:337)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.syncRequestScript(IloRemoteRunController.java:190)
+	at ilog.odms.ide.core.bridge.IloScriptRequestHelper.executeRequest(IloScriptRequestHelper.java:34)
+	at ilog.odms.ide.core.bridge.remote.IloScriptRequestBase.genericRequest(IloScriptRequestBase.java:55)
+	at ilog.odms.ide.core.bridge.remote.IloRemoteModelBridge.getElements(IloRemoteModelBridge.java:83)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.findElement(IloModelTextHoverAST.java:56)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getElementHover(IloModelTextHoverAST.java:101)
+	at ilog.odms.ide.ui.editors.model.IloModelTextHoverAST.getHoverInfo(IloModelTextHoverAST.java:116)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:168)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:54:47.307
+!MESSAGE Timeout
+!STACK 0
+java.lang.Exception: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:262)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-10 15:54:47.323
+!MESSAGE Error handling script request #1127
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+!STACK 0
+ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingException: Error handling script request #1127
+  code: IloOdmsIde.request("getElements");
+  cause: Timeout
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingRequest.handleResult(IloAbstractRunController.java:207)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:276)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-10 15:54:58.398
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:955)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:259)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-10 15:54:58.398
+!MESSAGE Error handling script request #1128
+  code: IloOdmsIde.request("getElements");
+  cause: java.lang.InterruptedException
+!STACK 0
+ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingException: Error handling script request #1128
+  code: IloOdmsIde.request("getElements");
+  cause: java.lang.InterruptedException
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$ScriptHandlingRequest.handleResult(IloAbstractRunController.java:207)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$SyncScriptHandlingRequest.waitAndHandleResultEvent(IloAbstractRunController.java:276)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.processRequestScript(IloAbstractRunController.java:443)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.access$9(IloAbstractRunController.java:422)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController$2.call(IloAbstractRunController.java:362)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1160)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:795)
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-11 16:58:30.924
+!MESSAGE Oplrun process is not responding, you must relaunch the Run Configuration.
+
+!ENTRY ilog.odms.ide.core 4 0 2018-07-11 16:58:35.533
+!MESSAGE Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+!STACK 0
+java.rmi.ConnectException: Connection refused to host: 127.0.0.1; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:631)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:228)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:214)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:141)
+	at javax.management.remote.rmi.RMIConnectionImpl_Stub.close(Unknown Source)
+	at javax.management.remote.rmi.RMIConnector.close(RMIConnector.java:516)
+	at javax.management.remote.rmi.RMIConnector.close(RMIConnector.java:456)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteOplrunLauncher.close(IloRemoteOplrunLauncher.java:567)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController.fireRunTerminated(IloRemoteRunController.java:167)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.requestAbort(IloAbstractRunController.java:817)
+	at ilog.odms.ide.internal.core.run.IloAbstractRunController.terminate(IloAbstractRunController.java:886)
+	at ilog.odms.ide.internal.core.run.remote.IloRemoteRunController$1.handleDebugEvents(IloRemoteRunController.java:155)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1187)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:431)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:90)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:380)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:236)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:218)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:183)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.net.Socket.connect(Socket.java:666)
+	at java.net.Socket.connect(Socket.java:606)
+	at java.net.Socket.<init>(Socket.java:469)
+	at java.net.Socket.<init>(Socket.java:239)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:52)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:160)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:625)
+	... 16 more
+!SESSION 2018-07-11 17:38:33.031 -----------------------------------------------
+eclipse.buildId=Build 0
+java.fullversion=8.0.5.0 - pwa6480sr5-20170905_01(SR5)
+JRE 1.8.0 IBM J9 2.9 Windows 8 amd64-64 Compressed References 20170901_363591 (JIT enabled, AOT enabled)
+J9VM - d56eb84
+JIT  - tr.open_20170901_140853_d56eb84
+OMR  - b033a01
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-07-11 17:43:07.858
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-11 17:43:17.519
+!MESSAGE ODM Bundle is OFF
+
+!ENTRY ilog.odms.ide.opllang 1 0 2018-07-11 17:51:29.183
+!MESSAGE concert_wrap.IloEndMT
+!SESSION 2018-07-11 17:51:04.936 -----------------------------------------------
+eclipse.buildId=Build 0
+java.fullversion=8.0.5.0 - pwa6480sr5-20170905_01(SR5)
+JRE 1.8.0 IBM J9 2.9 Windows 8 amd64-64 Compressed References 20170901_363591 (JIT enabled, AOT enabled)
+J9VM - d56eb84
+JIT  - tr.open_20170901_140853_d56eb84
+OMR  - b033a01
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\Faiza\AppData\Local\Temp\Faiza-2.mod
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean C:\Users\Faiza\AppData\Local\Temp\Faiza-2.mod
+
+!ENTRY ilog.odms.ide.core 1 0 2018-07-11 17:51:46.601
+!MESSAGE ODM Bundle is OFF

@@ -1,0 +1,41 @@
+/*********************************************
+ * OPL 12.8.0.0 Model
+ * Author: Faiza
+ * Creation Date: Jul 9, 2018 at 8:27:37 PM
+ *********************************************/
+ 
+int numOfWar = ...; 
+int numOfSup = ...; 
+int numOfRet = ...; 
+int numOfProd = ...; 
+int days = ...;
+
+range J = 0..numOfWar-1; 
+range I = 0..numOfSup-1;
+range R = 0..numOfRet-1; 
+range T = 0..days-1; 
+range K = 0..numOfProd-1; 
+int C[J] = ...; 
+int S[I][K] = ...; 
+int H[J][K] = ...; 
+
+/*{string} Warehouses = ...;
+int NbStores = ...;
+range Stores = 0..NbStores-1;
+int Capacity[Warehouses] = ...;
+int SupplyCost[Stores][Warehouses] = ...;
+dvar boolean Open[Warehouses];
+dvar boolean Supply[Stores][Warehouses];*/ 
+ 
+ //Decision Variables 
+ dvar boolean Y[I][K]; //if supplier i is supplying product k 
+ dvar int X[I][J][K][T]; //Units leaving supplier 
+ dvar int Inv[J][K][T];
+ 
+ //Objective Function 
+ minimize
+ 	sum(i in I, j in J, k in K, t in T)
+ 	  S[i][k] * X[i][j][k][t] +
+ 	sum(j in J, k in K, t in T)
+ 	  H[j][k] * Inv[j][k][t];
+ 	  
